@@ -8,10 +8,11 @@ int factorial(int n) {
 }
 
 int main() {
-    int num;
+    int n;
     printf("Enter a number: ");
-    scanf("%d", &num);
-    printf("Factorial of %d = %d\n", num, factorial(num));
+    scanf("%d", &n);
+    printf("Factorial of %d = %d\n", n, factorial(n));
     return 0;
 }
+
 
