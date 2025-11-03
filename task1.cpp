@@ -1,19 +1,39 @@
-#include <stdio.h>
+/*Week-8 Task #1
+Write a C program that prints shape giving below by using nested loop
+					1
+				1		2
+			1		2		3
+		1		2		3		4
+	1		2		3		4		5
+		1		2		3		4
+			1		2		3
+				1		2
+					1
+*/
 
-int main() {
-    int n = 4; // maximum number on center line
-    // Upper part including center
-    for (int i = 1; i <= n; i++) {
-        for (int s = 1; s <= n-i; s++) printf("  ");
-        for (int j = 1; j <= i; j++) printf("%d ", j);
-        printf("\n");
-    }
-    // Lower part
-    for (int i = n-1; i >= 1; i--) {
-        for (int s = 1; s <= n-i; s++) printf("  ");
-        for (int j = 1; j <= i; j++) printf("%d ", j);
-        printf("\n");
-    }
-    return 0;
+#include<stdio.h>
+
+main() {
+	int i, j, empt;
+	
+	for(i=1; i<=5; i++) {
+		for(empt=5; empt>i; empt--) {
+			printf(" ");
+		}
+		for(j=1; j<=i; j++) {
+			printf("%d ", j);
+		}
+		printf("\n");
+	}
+	
+	for(i = 5-1; i>=1; i--) {
+		for(empt=5; empt>i; empt--) {
+			printf(" ");
+		}
+		for(j=1; j<=i; j++) {
+			printf("%d ", j);
+		}
+		printf("\n");
+	}
 }
 
